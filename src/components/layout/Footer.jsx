@@ -10,11 +10,39 @@ function Footer() {
 
   return (
     <footer>
+        <section>
+            <h3>Sucursales</h3>
+            <ul>
+                <li>Monte Grande / Lunes a Sabados de 08:00 a 17:00hs</li>
+                <li>Lomas de Zamora / Lunes a Sabados de 08:00 a 17:00hs</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Contacto</h3>
+            <address>
+                <a href="mailto:ventas@protecno">ventas@protecno</a>
+                <a href="tel:+541124817992">1124817992</a>
+            </address>
+        </section>
+        <section>
+            <h3>Newsletter</h3>
+            <form>
+                <label htmlFor="buscar">Recibi nuestras ofertas</label>
+                <input id="buscar" type="email" placeholder="ejemplo@gmail.com" required/>
+                <button type="submit">Suscribete</button>
+            </form>
+        </section>
         {equipo.map((persona) => (
             <PersonCard key={persona.id} nombre={persona.nombre} rol={persona.rol} />
         ))}
-        <p>© 2026 ProTecno</p>
+        <section>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Términos y condiciones</a>
+            <p>© 2026 ProTecno</p>
+        </section>
+
     </footer>
+    
   )
 }
 
