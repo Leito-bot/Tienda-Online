@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombre": "Teclados",
+    "precio": 15000,
+    "categoria": "Teclados",
+    "stock": 25,
+    "imagen": "/img/productos/teclado.jpg",
+    "descripcion": "Edición ilustrada, tapa dura."
+  },
+  {
+    "id": 1,
+    "nombre": "Teclados",
+    "precio": 15000,
+    "categoria": "Teclados",
+    "stock": 25,
+    "imagen": "/img/productos/teclado.jpg",
+    "descripcion": "Edición ilustrada, tapa dura."
+  }
+]
