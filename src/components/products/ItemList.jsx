@@ -11,6 +11,7 @@ function ItemList({ productos }) {
           nombre={producto.nombre}
           precio={producto.precio}
           imagen={producto.imagen}
+          descripcion={producto.descripcion}
         />
       ))}
     </div>

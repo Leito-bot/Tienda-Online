@@ -43,3 +43,13 @@
 .boton {
   margin-top: auto;
 }
+
+.descripcion {
+  color: #555555;
+  font-size: 0.875rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}

@@ -4,6 +4,7 @@ import ItemList from './ItemList'
 function ItemListContainer() {
   const [productos, setProductos] = useState([])
   const [cargando, setCargando] = useState(true)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     fetch('/productos.json')
@@ -14,7 +15,9 @@ function ItemListContainer() {
         return respuesta.json()
       })
       .then((datos) => setProductos(datos))
-      .catch((error) => console.error('Error al cargar productos:', error))
+      .catch((err) => {
+        console.error('Error al cargar productos:', err)
+        setError('No pudimos cargar los productos. Intentá de nuevo más tarde.')})
       .finally(() => setCargando(false))
   }, [])
 
@@ -23,7 +26,9 @@ function ItemListContainer() {
       <h2 className="titulo-seccion">Catálogo de productos</h2>
       {cargando ? (
         <p className="mensaje">Cargando productos...</p>
-      ) : (
+      ) : error ? (
+        <p className="mensaje">{error}</p>
+      ) :(
         <ItemList productos={productos} />
       )}
     </section>

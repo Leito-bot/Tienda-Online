@@ -2,19 +2,19 @@
   {
     "id": 1,
     "nombre": "Teclados",
-    "precio": 15000,
+    "precio": 20000,
     "categoria": "Teclados",
-    "stock": 25,
+    "stock": 50,
     "imagen": "/img/productos/teclado.jpg",
-    "descripcion": "Edición ilustrada, tapa dura."
+    "descripcion": "Teclado Gamer Retroiluminado"
   },
   {
-    "id": 1,
-    "nombre": "Teclados",
-    "precio": 15000,
-    "categoria": "Teclados",
-    "stock": 25,
-    "imagen": "/img/productos/teclado.jpg",
-    "descripcion": "Edición ilustrada, tapa dura."
+    "id": 2,
+    "nombre": "Fundas de celular",
+    "precio": 10000,
+    "categoria": "Fundas para celular",
+    "stock": 150,
+    "imagen": "/img/productos/Fundas-Lisas.png",
+    "descripcion": "Fundas Lisas de cilicona, rigidas, transparentes y más. Elegi la tuya"
   }
 ]
