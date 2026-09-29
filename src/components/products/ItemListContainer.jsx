@@ -20,8 +20,12 @@ function ItemListContainer() {
 
   return (
     <section>
-      <h2>Catálogo de productos</h2>
-      {cargando ? <p>Cargando productos...</p> : <ItemList productos={productos} />}
+      <h2 className="titulo-seccion">Catálogo de productos</h2>
+      {cargando ? (
+        <p className="mensaje">Cargando productos...</p>
+      ) : (
+        <ItemList productos={productos} />
+      )}
     </section>
   )
 }

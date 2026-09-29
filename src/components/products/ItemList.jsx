@@ -1,8 +1,9 @@
 import Item from './Item'
+import styles from './ItemList.module.css'
 
 function ItemList({ productos }) {
   return (
-    <div>
+    <div className={styles.grilla}>
       {productos.map((producto) => (
         <Item
           key={producto.id}

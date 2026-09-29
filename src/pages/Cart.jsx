@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 
 function Cart() {
   return (
-    <section>
+    <section className="estado-vacio">
       <h2>Tu carrito</h2>
       <p>Tu carrito está vacío.</p>
-      <Link to="/productos">Ver catálogo</Link>
+      <Link to="/productos" className="boton">Ver catálogo</Link>
     </section>
   )
 }

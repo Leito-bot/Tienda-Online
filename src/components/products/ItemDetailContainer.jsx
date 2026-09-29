@@ -25,8 +25,8 @@ function ItemDetailContainer() {
       .finally(() => setCargando(false))
   }, [id])
 
-  if (cargando) return <p>Cargando producto...</p>
-  if (!producto) return <p>Producto no encontrado.</p>
+  if (cargando) return <p className="mensaje">Cargando producto...</p>
+  if (!producto) return <p className="mensaje">Producto no encontrado.</p>
 
   return <ItemDetail {...producto} />
 }

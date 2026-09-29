@@ -1,0 +1,32 @@
+.tarjeta {
+  background-color: #1e1e1e;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-amarillo);
+  color: var(--color-negro);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.nombre {
+  color: var(--color-blanco);
+  font-size: 1rem;
+}
+
+.rol {
+  color: #aaaaaa;
+  font-size: 0.875rem;
+}
