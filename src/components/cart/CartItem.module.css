@@ -1,0 +1,101 @@
+.item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto auto auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--color-blanco);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.imagen {
+  width: 80px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.nombre {
+  font-size: 1rem;
+  color: var(--color-negro);
+}
+
+.precio {
+  color: #666666;
+  font-size: 0.875rem;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--color-negro);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.controles button {
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: var(--color-blanco);
+  border: none;
+  cursor: pointer;
+}
+
+.controles button:hover:not(:disabled) {
+  background-color: var(--color-amarillo);
+}
+
+.controles button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.cantidad {
+  min-width: 3ch;
+  text-align: center;
+  font-weight: 700;
+}
+
+.subtotal {
+  font-weight: 800;
+  min-width: 90px;
+  text-align: right;
+}
+
+.eliminar {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #c62828;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.eliminar:hover {
+  background-color: #fdecea;
+}
+
+.controles button:focus-visible,
+.eliminar:focus-visible {
+  outline: 3px solid var(--color-negro);
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .item {
+    grid-template-columns: 64px 1fr auto;
+    grid-template-areas:
+      'imagen info eliminar'
+      'imagen controles subtotal';
+  }
+
+  .imagen { grid-area: imagen; width: 64px; }
+  .info { grid-area: info; }
+  .controles { grid-area: controles; justify-self: start; }
+  .subtotal { grid-area: subtotal; min-width: auto; }
+  .eliminar { grid-area: eliminar; justify-self: end; }
+}
