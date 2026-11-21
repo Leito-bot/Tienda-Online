@@ -1,0 +1,41 @@
+.contador {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 260px;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid var(--color-negro);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.controles button {
+  width: 44px;
+  height: 44px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-color: var(--color-blanco);
+  border: none;
+  cursor: pointer;
+}
+
+.controles button:hover:not(:disabled) {
+  background-color: var(--color-amarillo);
+}
+
+.controles button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.cantidad {
+  font-size: 1.125rem;
+  font-weight: 700;
+  min-width: 3ch;
+  text-align: center;
+}

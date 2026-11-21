@@ -17,7 +17,8 @@ function ItemListContainer() {
       .then((datos) => setProductos(datos))
       .catch((err) => {
         console.error('Error al cargar productos:', err)
-        setError('No pudimos cargar los productos. Intentá de nuevo más tarde.')})
+        setError('No pudimos cargar los productos. Intentá de nuevo más tarde.')
+      })
       .finally(() => setCargando(false))
   }, [])
 
@@ -28,7 +29,7 @@ function ItemListContainer() {
         <p className="mensaje">Cargando productos...</p>
       ) : error ? (
         <p className="mensaje">{error}</p>
-      ) :(
+      ) : (
         <ItemList productos={productos} />
       )}
     </section>
