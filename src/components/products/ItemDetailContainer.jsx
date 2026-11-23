@@ -1,28 +1,16 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail'
+import { obtenerProductoPorId } from '../../services/productos'
 
-function ItemDetailContainer() {
-  const { id } = useParams()
+function DetalleProducto({ id }) {
   const [producto, setProducto] = useState(null)
   const [cargando, setCargando] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    setCargando(true)
-    setError(null)
-
-    fetch('/productos.json')
-      .then((respuesta) => {
-        if (!respuesta.ok) {
-          throw new Error(`Error HTTP: ${respuesta.status}`)
-        }
-        return respuesta.json()
-      })
-      .then((datos) => {
-        const encontrado = datos.find((item) => item.id === Number(id))
-        setProducto(encontrado || null)
-      })
+    obtenerProductoPorId(id)
+      .then((encontrado) => setProducto(encontrado))
       .catch((err) => {
         console.error('Error al cargar el producto:', err)
         setError('No pudimos cargar el producto. Intentá de nuevo más tarde.')
@@ -35,6 +23,11 @@ function ItemDetailContainer() {
   if (!producto) return <p className="mensaje">Producto no encontrado.</p>
 
   return <ItemDetail {...producto} />
+}
+
+function ItemDetailContainer() {
+  const { id } = useParams()
+  return <DetalleProducto key={id} id={id} />
 }
 
 export default ItemDetailContainer

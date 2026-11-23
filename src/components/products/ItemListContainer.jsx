@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import ItemList from './ItemList'
+import { obtenerProductos } from '../../services/productos'
 
 function ItemListContainer() {
   const [productos, setProductos] = useState([])
@@ -7,13 +8,7 @@ function ItemListContainer() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('/productos.json')
-      .then((respuesta) => {
-        if (!respuesta.ok) {
-          throw new Error(`Error HTTP: ${respuesta.status}`)
-        }
-        return respuesta.json()
-      })
+    obtenerProductos()
       .then((datos) => setProductos(datos))
       .catch((err) => {
         console.error('Error al cargar productos:', err)
@@ -29,6 +24,8 @@ function ItemListContainer() {
         <p className="mensaje">Cargando productos...</p>
       ) : error ? (
         <p className="mensaje">{error}</p>
+      ) : productos.length === 0 ? (
+        <p className="mensaje">Todavía no hay productos cargados.</p>
       ) : (
         <ItemList productos={productos} />
       )}
