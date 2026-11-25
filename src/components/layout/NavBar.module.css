@@ -8,7 +8,9 @@
 .lista {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
   padding: 0.75rem 1rem;
 }
@@ -34,8 +36,9 @@
 .activo {
   color: var(--color-amarillo);
   border-bottom-color: var(--color-amarillo);
+}
 
-  .contador {
+.contador {
   display: inline-block;
   min-width: 1.4rem;
   margin-left: 0.4rem;
@@ -47,11 +50,6 @@
   font-weight: 800;
   text-align: center;
   line-height: 1.4rem;
-  }
-
-
-.lista {
-  flex-wrap: wrap;
 }
 
 .salir {
@@ -73,5 +71,4 @@
 .salir:focus-visible {
   outline: 2px solid var(--color-amarillo);
   outline-offset: 4px;
-}
 }

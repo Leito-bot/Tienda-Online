@@ -4,7 +4,7 @@ import { useAuth } from '../../hooks/useAuth'
 import styles from './NavBar.module.css'
 
 function NavBar() {
-  const { totalUnidades } = useCarrito()
+  const { totalUnidades, vaciarCarrito } = useCarrito()
   const { usuario, esAdmin, logout } = useAuth()
   const navigate = useNavigate()
 
@@ -13,6 +13,7 @@ function NavBar() {
 
   const manejarSalir = async () => {
     await logout()
+    vaciarCarrito()
     navigate('/')
   }
 
