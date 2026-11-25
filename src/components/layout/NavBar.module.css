@@ -48,4 +48,30 @@
   text-align: center;
   line-height: 1.4rem;
   }
+
+
+.lista {
+  flex-wrap: wrap;
+}
+
+.salir {
+  background: none;
+  border: 1px solid var(--color-amarillo);
+  border-radius: 4px;
+  color: var(--color-amarillo);
+  font: inherit;
+  font-weight: 600;
+  padding: 0.15rem 0.75rem;
+  cursor: pointer;
+}
+
+.salir:hover {
+  background-color: var(--color-amarillo);
+  color: var(--color-negro);
+}
+
+.salir:focus-visible {
+  outline: 2px solid var(--color-amarillo);
+  outline-offset: 4px;
+}
 }
