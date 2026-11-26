@@ -1,0 +1,115 @@
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.encabezado h2 {
+  margin-bottom: 0;
+}
+
+.exito {
+  color: #2e7d32;
+  background-color: #e8f5e9;
+  border-radius: 6px;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.error {
+  color: #c62828;
+  background-color: #fdecea;
+  border-radius: 6px;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.tablaContenedor {
+  overflow-x: auto;
+  background-color: var(--color-blanco);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.tabla th,
+.tabla td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.tabla th {
+  background-color: var(--color-negro);
+  color: var(--color-blanco);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.producto {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.miniatura {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.acciones {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.editar,
+.eliminar {
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  background: none;
+}
+
+.editar {
+  border: 2px solid var(--color-negro);
+}
+
+.editar:hover {
+  background-color: var(--color-amarillo);
+}
+
+.eliminar {
+  border: 2px solid #c62828;
+  color: #c62828;
+}
+
+.eliminar:hover {
+  background-color: #fdecea;
+}
+
+.editar:focus-visible,
+.eliminar:focus-visible {
+  outline: 3px solid var(--color-amarillo);
+  outline-offset: 2px;
+}
+
+.oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

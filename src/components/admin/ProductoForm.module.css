@@ -1,0 +1,89 @@
+.formulario {
+  background-color: var(--color-blanco);
+  border-top: 6px solid var(--color-amarillo);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.titulo {
+  font-size: 1.25rem;
+  color: var(--color-negro);
+}
+
+.fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.campo label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.campo input,
+.campo textarea {
+  padding: 0.6rem;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.campo input:focus-visible,
+.campo textarea:focus-visible {
+  outline: 3px solid var(--color-amarillo);
+  outline-offset: 1px;
+}
+
+.campo [aria-invalid='true'] {
+  border-color: #c62828;
+}
+
+.error {
+  color: #c62828;
+  font-size: 0.85rem;
+}
+
+.errorGeneral {
+  color: #c62828;
+  background-color: #fdecea;
+  border-radius: 6px;
+  padding: 0.6rem;
+}
+
+.acciones {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cancelar {
+  padding: 0.6rem 1.25rem;
+  border: 2px solid #999999;
+  border-radius: 6px;
+  background: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.acciones button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .fila {
+    grid-template-columns: 1fr;
+  }
+}
