@@ -1,0 +1,42 @@
+.paginador {
+  margin-top: 2rem;
+}
+
+.lista {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.lista button {
+  min-width: 44px;
+  height: 44px;
+  padding: 0 0.75rem;
+  border: 2px solid var(--color-negro);
+  border-radius: 8px;
+  background-color: var(--color-blanco);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lista button:hover:not(:disabled) {
+  background-color: var(--color-amarillo);
+}
+
+.lista button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.lista button:focus-visible {
+  outline: 3px solid var(--color-amarillo);
+  outline-offset: 2px;
+}
+
+.actual {
+  background-color: var(--color-negro) !important;
+  color: var(--color-amarillo);
+}
