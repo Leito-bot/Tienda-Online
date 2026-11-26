@@ -2,12 +2,13 @@
 
 Tienda online de insumos informáticos al por mayor, desarrollada con React como proyecto final de la cursada de React JS (Talento Tech, 2026).
 
-🔗 **Demo:** https://TU-URL-DE-VERCEL.vercel.app
+🔗 **Demo:** https://tienda-online-ten-eta.vercel.app/
 📦 **Repositorio:** https://github.com/Leito-bot/Tienda-Online
 
 ## 🔑 Acceso al panel de administración
 
-| Usuario           | Contraseña |
+| Usuario | Contraseña |
+|---|---|
 | `admin@gmail.com` | `admin123` |
 
 Ingresá desde **Ingresar** en el menú. Con este usuario aparece la sección **Admin**.
